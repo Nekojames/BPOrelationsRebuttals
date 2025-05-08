@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Intake Call Script</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+
+        .left-panel,
+        .right-panel {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .left-panel {
+            background-color: #f4f4f4;
+            border-right: 2px solid #ccc;
+        }
+
+        .right-panel {
+            background-color: #fafafa;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .objections-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .objection-item {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .left-panel,
+            .right-panel {
+                width: 100%;
+                border-right: none;
+                border-bottom: 2px solid #ccc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-panel">
+            <h2>Call Script</h2>
+            <textarea readonly>
+Hello, (Client Name)! How are you doing today?
+This is (Your Name) with the Personal Loan Intake Department. I'm calling regarding the personal loan offer we sent you in the mail at a promotional interest rate starting at 5.99% (five-point nine nine percent), which is set to expire this week!
+
+I just need to verify a few details to make sure you meet the minimum requirements. This will only take a few minutes. First, can you do me a favor and confirm that I have the correct spelling of your name. I have: J-O-H-N S-M-I-T-H. Is that correct? Perfect, thank you!
+
+And the best number to reach you is (123) 456-7890, right?
+What is the best email address to reach you at?
+Next, could you please confirm your current address? Complete street city state zip code 
+What is your monthly take-home after taxes?
+
+Lastly, I will need to do a soft credit check before connecting you with a loan specialist. This will not affect your credit score in any way.
+For this, I'll just need to confirm your date of birth.
+Ok, and you're social.
+
+I'm submitting this to the underwriting department now, and it'll just take a few minutes to verify your status.
+(Note: While waiting for the result, take the opportunity to build rapport with the lead. Engage in light conversation)
+
+STATUS DECLINED (Loan CR Agent): Unfortunately, you don't meet the minimum requirements right now, but you're welcome to apply with us again in 60/90 days.
+STATUS APPROVED (Loan CR Agent): It looks like you meet the minimum requirements, so we can proceed with transferring you to our specialist.
+
+HANDOFF
+Specialist: "Hi, this is Marc, agent ID 1234 with Lendvia, on a recorded line."
+CR Agent: "Hi, [Loan Specialist Name], I have [Client Name on the line with file number [Logixx file number. I've confirmed that [Client Name) meets all the minimum  requirements to proceed. Can you please go over the available loan options with them?”
+CR Agent: Hello (Customer)? Thank you for waiting. I have my loan specialist (Name) and he/she will help you further. Thank you for your time, you both have a GREAT day!
+      </textarea>
+        </div>
+        <div class="right-panel">
+            <h2>Objections and Rebuttals</h2>
+            <input type="text" id="search" placeholder="Search Objection...">
+            <ul id="objections" class="objections-list">
+                <li class="objection-item"><strong>1. “How did you get my information?”</strong> - As a licensed lender,
+                    we
+                    lawfully access data through secure, verified credit bureaus to identify individuals pre-qualified
+                    for
+                    exclusive financial solutions. Your privacy is safeguarded by federal compliance standards, and
+                    every
+                    step we take is with full accountability and integrity. This process was built to protect you while
+                    opening the door to real opportunities. </li>
+                <li class="objection-item"><strong>2. Hesitant to Provide SSN</strong> - YYour security matters and
+                    that’s
+                    why we use bank-level encryption to protect your SSN at every step. We don’t ask for information we
+                    don’t need. This allows us to verify your identity and secure the best offers on your behalf—without
+                    affecting your credit or exposing your data. It’s the safest way to move forward with full
+                    confidence.
+                </li>
+                <li class="objection-item"><strong>3. “What company is this?”</strong> - We’re Loan Assistance Center
+                    trusted partners of top-tier lenders across the country. Our job is to simplify your process, cut
+                    through the noise, and connect you with real, affordable options. We’re not here to sell—we’re here
+                    to
+                    solve, and we do it with professionalism, speed, and purpose. </li>
+                <li class="objection-item"><strong>4. “Don’t do a soft pull—I have bad credit.”</strong> - Bad credit
+                    doesn’t stop us it just gives us more to work with. Our lenders evaluate your full profile, not just
+                    a
+                    number. And because this is a soft pull, your score stays completely untouched. It’s your shot at a
+                    smarter financial path without risk or penalty. </li>
+                <li class="objection-item"><strong>5. Wrong SSN or Info</strong> - To proceed, our system needs
+                    verified,
+                    accurate information to match you with the right lender. A single mismatch could delay or block your
+                    approval. Correcting it now ensures your eligibility and keeps the process seamless from here. </li>
+                <li class="objection-item"><strong>6. “I’m not interested” / “Not looking for a loan”</strong> -
+                    Completely
+                    understand—but what we’re offering isn’t just a loan—it’s a financial reset. Whether you’re facing
+                    high-interest debt, unexpected expenses, or just want flexibility, this solution puts control back
+                    in
+                    your hands. When real options are on the table, walking away means walking away from relief. </li>
+                <li class="objection-item"><strong>7. “What’s your exact location?”</strong> - We’re based in Irvine,
+                    California, and we work exclusively with a national network of vetted lenders. Once you’re
+                    pre-qualified, you’ll get full transparency about the lender, terms, and next steps. Every piece of
+                    this
+                    process is built on trust, clarity, and compliance. 2525 Main St, Irvine, CA 92614 in front of John
+                    Wayne A</li>
+                <li class="objection-item"><strong>8. “I don’t have time.”</strong> - That’s exactly why we streamlined
+                    this
+                    process to take just minutes. What you do today could impact your financial freedom for years. And
+                    this
+                    limited-time offer doesn’t wait. We’re ready when you are. </li>
+                <li class="objection-item"><strong>9. “Why unlock my account for a soft pull?”</strong> - Your account
+                    needs
+                    to be unlocked so we can complete a risk-free soft inquiry—which has zero effect on your credit
+                    score.
+                    It’s quick, secure, and the only way we can present accurate, personalized loan terms. It keeps you
+                    in
+                    control, without compromise.</li>
+                <li class="objection-item"><strong>10. “What’s your website or address?”</strong> - Happy to provide all
+                    official info—but to protect your identity, we only send sensitive credentials through secure email.
+                    That ensures you’re getting verified information directly from underwriting—accurately, safely, and
+                    without delay. </li>
+                <li class="objection-item"><strong>11. “Why don’t you have my information?”</strong> - We pull data from
+                    multiple sources, but to prevent errors or mismatches, we verify directly with you. This ensures
+                    that
+                    what we send is accurate, tailored, and fully aligned with what you qualify for. No wasted time. No
+                    missed opportunity.</li>
+                <li class="objection-item"><strong>12. “How are you different from other lenders?”</strong> - Unlike
+                    traditional lenders, we fight for your best terms. You get access to low fixed rates starting at
+                    5.99%,
+                    no collateral required, and real approvals based on your overall financial story—not just your
+                    credit
+                    score. Add in faster funding and airtight security, and this becomes the smarter, safer way to
+                    borrow.
+                </li>
+                <li class="objection-item"><strong>13. “Soft Pull vs. Hard Pull?”</strong> - A soft pull lets us check
+                    your
+                    pre-approval status without touching your credit score. It’s invisible to other lenders and leaves
+                    zero
+                    impact. Hard pulls come later, only with your full consent—but right now, all we’re doing is
+                    exploring
+                    your best options safely and smartly. </li>
+                <li class="objection-item"><strong>14. “Why do you need my email?”</strong> - Your email is the direct
+                    line
+                    for critical documents, updates, and approvals. It ensures you receive everything in real
+                    time—securely
+                    and without any delays. This keeps your process smooth, accurate, and fully protected from start to
+                    finish. </li>
+                <li class="objection-item"><strong>15. “I want info via email first.”</strong> - Absolutely—we respect
+                    that.
+                    First, we need to confirm key details to make sure the offer we send is real and accurate. Once
+                    that’s
+                    done, your personalized loan options will be delivered straight to your inbox—secure, tailored, and
+                    ready for review….</li>
+                <li class="objection-item"><strong>16. “I don’t have an email.”</strong> - That’s completely
+                    understandable.
+                    But what you’re missing isn’t a sales pitch—it’s a real conversation that could lead to a better
+                    rate,
+                    faster approval, or bigger savings. It’s free, fast, and handled by experts who are here to help—not
+                    pressure. When people hear what’s actually available to them, they’re glad they took the call. </li>
+                <li class="objection-item"><strong>17. Doesn’t Want to Talk to Loan Specialist</strong> - That’s
+                    completely
+                    understandable. But what you’re missing isn’t a sales pitch—it’s a real conversation that could lead
+                    to
+                    a better rate, faster approval, or bigger savings. It’s free, fast, and handled by experts who are
+                    here
+                    to help—not pressure. When people hear what’s actually available to them, they’re glad they took the
+                    call.
+                    18. WHEN YOU ENCOUNTER A CUSTOMER WHO IS ALREADY BEING HANDLED BY A CLOSER, DON'T JUST TRANSFER THEM
+                    WITHOUT GIVING THEM CONTEXT ABOUT WHAT HAPPENED! (Ex:CRM #69851)
+                    'I see here that you spoke with our Senior Loan Advisor and he/she was assisting you with the
+                    program.
+                    In order for us to provide you the best assistance, I will connect you with that Senior Advisor.
+                    His/her
+                    name is (SA NAME). Please stay on the line while I connect you.'
+                </li>
+                <li class="objection-item"><strong>18. Handled by Closer</strong> - Please be reminded that if the
+                    result of
+                    a credit pull returns as "NO RECORD FOUND," it typically indicates that incorrect information was
+                    provided by the agent. This could be due to discrepancies in the details entered during the process.
+                    To ensure accurate results and avoid delays, please double-check and confirm the following
+                    information
+                    with the client before submitting.
+                    Legal Name:
+                    "Can you please confirm your full legal name as it appears on your card?" Please spell it out for
+                    me."
+                    Billing Address:
+                    "Can you confirm the utility/billing address associated with your account?"
+                </li>
+                <li class="objection-item"><strong>20. IF FROZEN, FREEZE OR LOCKED</strong> -Cx: "Why do I need to
+                    unlock my
+                    account for this soft credit pull?"
+                    Rebuttal: "I understand your concern. The reason we need to unlock your account is so we can proceed
+                    with the soft credit pull, which is completely free of charge. It's a standard procedure to ensure
+                    we
+                    have the necessary information to continue with the process smoothly. You can easily unlock your
+                    account
+                    by either calling the credit bureau directly or visiting their website."
+                    Cx: I'm not sure about calling the credit bureau.
+                    Rebuttal: "I completely understand. It may seem like an extra step, but it’s a quick process. The
+                    credit
+                    bureaus, like Experian, Equifax, and TransUnion, have dedicated support teams to help with unlocking
+                    your account. You can either call them or go to their website to do this securely. Once it’s
+                    unlocked,
+                    we can proceed without any delays. It's really just a few minutes, and after that, we’re good to
+                    go."
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("search").addEventListener("input", function (e) {
+            const query = e.target.value.toLowerCase();
+            const items = document.querySelectorAll(".objection-item");
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(query) ? "" : "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
