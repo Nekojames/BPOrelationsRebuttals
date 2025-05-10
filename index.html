@@ -6,105 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Intake Call Script</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        background-color: #000000; /* Black background */
-        color: #FFFFFF; /* White text for high contrast */
-        font-size: 1rem; /* Base font size for readability */
-        line-height: 1.6; /* Improved line spacing for readability */
-    }
-
-    .main-container {
-        display: flex;
-        flex-direction: row;
-        height: 100vh;
-    }
-
-    .left-panel,
-    .right-panel {
-        flex: 1;
-        padding: 20px;
-        overflow-y: auto;
-        box-sizing: border-box;
-    }
-
-    .left-panel {
-        background-color: #121212; /* Darker gray background for left panel */
-        border-right: 2px solid #333; /* Subtle border between panels */
-    }
-
-    .right-panel {
-        background-color: #121212; /* Darker gray background for right panel */
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 2rem; /* Larger heading for better visibility */
-        color: #FFFFFF; /* White color for headings */
-        margin: 0;
-        padding: 20px 0;
-    }
-
-    .objections-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .objection-item {
-        margin-bottom: 15px;
-        font-size: 1.25rem; /* Slightly larger font for easy reading */
-        color: #E0E0E0; /* Lighter gray text for item descriptions */
-    }
-
-    textarea {
-        font-size: 1rem; /* Text size for textarea */
-        padding: 10px;
-        width: 100%;
-        height: 90%;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-        background-color: #333333; /* Dark background for textarea */
-        color: #FFFFFF; /* White text for textarea */
-        border: 1px solid #555555; /* Subtle border for textarea */
-        overflow-y: auto;
-        white-space: pre-wrap; /* Preserve formatting and line breaks */
-        word-wrap: break-word; /* Break words if necessary */
-        resize: both; /* Make the textarea resizable both vertically and horizontally */
-    }
-
-    /* Mobile-friendly adjustments */
-    @media (max-width: 768px) {
         body {
-            font-size: 1.125rem; /* Larger font for smaller screens */
-        }
-
-        h2 {
-            font-size: 1.75rem; /* Adjust heading font size for mobile */
-        }
-
-        .objection-item {
-            font-size: 1.5rem; /* Larger text for mobile */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text for high contrast */
+            font-size: 1rem; /* Base font size for readability */
+            line-height: 1.6; /* Improved line spacing for readability */
         }
 
         .main-container {
-            flex-direction: column;
-            height: auto;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            flex-wrap: wrap;
         }
 
         .left-panel,
         .right-panel {
-            width: 100%;
-            border-right: none;
-            border-bottom: 2px solid #333333; /* Border on mobile */
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            box-sizing: border-box;
         }
-    }
-</style>
 
+        .left-panel {
+            background-color: #121212; /* Darker gray background for left panel */
+            border-right: 2px solid #333; /* Subtle border between panels */
+        }
+
+        .right-panel {
+            background-color: #121212; /* Darker gray background for right panel */
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem; /* Larger heading for better visibility */
+            color: #FFFFFF; /* White color for headings */
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .objections-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .objection-item {
+            margin-bottom: 15px;
+            font-size: 1.25rem; /* Slightly larger font for easy reading */
+            color: #E0E0E0; /* Lighter gray text for item descriptions */
+        }
+
+        textarea {
+            font-size: 1rem; /* Text size for textarea */
+            padding: 10px;
+            width: 100%;
+            height: 90%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            background-color: #333333; /* Dark background for textarea */
+            color: #FFFFFF; /* White text for textarea */
+            border: 1px solid #555555; /* Subtle border for textarea */
+            overflow-y: auto;
+            white-space: pre-wrap; /* Preserve formatting and line breaks */
+            word-wrap: break-word; /* Break words if necessary */
+            resize: both; /* Make the textarea resizable both vertically and horizontally */
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.125rem; /* Larger font for smaller screens */
+            }
+
+            h2 {
+                font-size: 1.75rem; /* Adjust heading font size for mobile */
+            }
+
+            .objection-item {
+                font-size: 1.5rem; /* Larger text for mobile */
+            }
+
+            .main-container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .left-panel,
+            .right-panel {
+                width: 100%;
+                border-right: none;
+                border-bottom: 2px solid #333333; /* Border on mobile */
+            }
+
+            /* Adjust textarea height on mobile for better visibility */
+            textarea {
+                height: 50vh; /* Set height to 50% of the viewport on mobile */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -194,11 +199,12 @@ Thanks again, and I hope you both have a great day! ↑
         </div>
         <div class="right-panel">
             <h2>Objections and Rebuttals</h2>
-            <input type="text" id="search" placeholder="Search Objection...">
+            <input type="text" id="search" placeholder="Search Objection..." style="width: 100%; padding: 10px;">
             <ul id="objections" class="objections-list">
                 <li class="objection-item"><strong>1. "How did you get my information?"</strong><br>
-                We work with secure, verified sources to identify people who might benefit from our financial solutions. Our goal is <em>simple</em>: connect you with the right options without the hassle. We take privacy seriously, so your information is always protected.
-                <span class="intonation">(Pause briefly after 'simple' to let this sink in. Use a confident, reassuring tone. Rising intonation on 'simple' and falling intonation on 'protected'.)</span></li>
+                    We work with secure, verified sources to identify people who might benefit from our financial solutions. Our goal is <em>simple</em>: connect you with the right options without the hassle. We take privacy seriously, so your information is always protected.
+                    <span class="intonation">(Pause briefly after 'simple' to let this sink in. Use a confident, reassuring tone. Rising intonation on 'simple' and falling intonation on 'protected'.)</span>
+                </li>
                 <!-- Add remaining objections here -->
             </ul>
         </div>
