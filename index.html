@@ -12,9 +12,10 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
-        background-color: #121212;
-        color: #E0E0E0;
-        font-size: 1rem; /* Base font size for better scalability */
+        background-color: #000000; /* Black background */
+        color: #FFFFFF; /* White text for high contrast */
+        font-size: 1rem; /* Base font size for readability */
+        line-height: 1.6; /* Improved line spacing for readability */
     }
 
     .main-container {
@@ -32,19 +33,20 @@
     }
 
     .left-panel {
-        background-color: #1E1E1E;
-        border-right: 2px solid #333;
+        background-color: #121212; /* Darker gray background for left panel */
+        border-right: 2px solid #333; /* Subtle border between panels */
     }
 
     .right-panel {
-        background-color: #1E1E1E;
-        border-left: 2px solid #333;
+        background-color: #121212; /* Darker gray background for right panel */
     }
 
     h2 {
         text-align: center;
-        color: #FFFFFF;
-        font-size: 2rem; /* Larger font size for headings */
+        font-size: 2rem; /* Larger heading for better visibility */
+        color: #FFFFFF; /* White color for headings */
+        margin: 0;
+        padding: 20px 0;
     }
 
     .objections-list {
@@ -54,37 +56,34 @@
     }
 
     .objection-item {
-        margin-bottom: 10px;
-        font-size: 1.25rem; /* Larger text for readability */
+        margin-bottom: 15px;
+        font-size: 1.25rem; /* Slightly larger font for easy reading */
+        color: #E0E0E0; /* Lighter gray text for item descriptions */
     }
 
     input[type="text"], textarea {
-        font-size: 1rem; /* Adjust font size in inputs and textareas */
+        font-size: 1rem; /* Text size for inputs */
         padding: 10px;
         width: 100%;
         margin-bottom: 20px;
         box-sizing: border-box;
-        background-color: #333;
-        color: #E0E0E0;
-        border: 1px solid #555;
+        background-color: #333333; /* Dark background for input fields */
+        color: #FFFFFF; /* White text for input fields */
+        border: 1px solid #555555; /* Subtle border for input fields */
     }
 
-    /* Mobile adjustments */
+    /* Mobile-friendly adjustments */
     @media (max-width: 768px) {
         body {
-            font-size: 1.25rem; /* Larger font size for small screens */
+            font-size: 1.125rem; /* Larger font for smaller screens */
         }
 
         h2 {
-            font-size: 1.5rem; /* Adjust heading font size for mobile */
+            font-size: 1.75rem; /* Adjust heading font size for mobile */
         }
 
         .objection-item {
-            font-size: 1.5rem; /* Increase font size for mobile for better readability */
-        }
-
-        input[type="text"], textarea {
-            font-size: 1.125rem; /* Increase input text size for mobile */
+            font-size: 1.5rem; /* Larger text for mobile */
         }
 
         .main-container {
@@ -96,7 +95,7 @@
         .right-panel {
             width: 100%;
             border-right: none;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #333333; /* Border on mobile */
         }
     }
 </style>
