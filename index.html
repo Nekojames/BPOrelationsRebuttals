@@ -6,99 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Intake Call Script</title>
     <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Black background */
+        color: #FFFFFF; /* White text for high contrast */
+        font-size: 1rem; /* Base font size for readability */
+        line-height: 1.6; /* Improved line spacing for readability */
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .left-panel {
+        background-color: #121212; /* Darker gray background for left panel */
+        border-right: 2px solid #333; /* Subtle border between panels */
+    }
+
+    .right-panel {
+        background-color: #121212; /* Darker gray background for right panel */
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem; /* Larger heading for better visibility */
+        color: #FFFFFF; /* White color for headings */
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .objections-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .objection-item {
+        margin-bottom: 15px;
+        font-size: 1.25rem; /* Slightly larger font for easy reading */
+        color: #E0E0E0; /* Lighter gray text for item descriptions */
+    }
+
+    textarea {
+        font-size: 1rem; /* Text size for textarea */
+        padding: 10px;
+        width: 100%;
+        height: 90%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        background-color: #333333; /* Dark background for textarea */
+        color: #FFFFFF; /* White text for textarea */
+        border: 1px solid #555555; /* Subtle border for textarea */
+        overflow-y: auto;
+        white-space: pre-wrap; /* Preserve formatting and line breaks */
+        word-wrap: break-word; /* Break words if necessary */
+        resize: none; /* Disable resizing of textarea */
+    }
+
+    /* Mobile-friendly adjustments */
+    @media (max-width: 768px) {
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            background-color: #000000; /* Black background */
-            color: #FFFFFF; /* White text for high contrast */
-            font-size: 1rem; /* Base font size for readability */
-            line-height: 1.6; /* Improved line spacing for readability */
+            font-size: 1.125rem; /* Larger font for smaller screens */
+        }
+
+        h2 {
+            font-size: 1.75rem; /* Adjust heading font size for mobile */
+        }
+
+        .objection-item {
+            font-size: 1.5rem; /* Larger text for mobile */
         }
 
         .main-container {
-            display: flex;
-            flex-direction: row;
-            height: 100vh;
+            flex-direction: column;
+            height: auto;
         }
 
         .left-panel,
         .right-panel {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            box-sizing: border-box;
-        }
-
-        .left-panel {
-            background-color: #121212; /* Darker gray background for left panel */
-            border-right: 2px solid #333; /* Subtle border between panels */
-        }
-
-        .right-panel {
-            background-color: #121212; /* Darker gray background for right panel */
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2rem; /* Larger heading for better visibility */
-            color: #FFFFFF; /* White color for headings */
-            margin: 0;
-            padding: 20px 0;
-        }
-
-        .objections-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .objection-item {
-            margin-bottom: 15px;
-            font-size: 1.25rem; /* Slightly larger font for easy reading */
-            color: #E0E0E0; /* Lighter gray text for item descriptions */
-        }
-
-        input[type="text"], textarea {
-            font-size: 1rem; /* Text size for inputs */
-            padding: 10px;
             width: 100%;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            background-color: #333333; /* Dark background for input fields */
-            color: #FFFFFF; /* White text for input fields */
-            border: 1px solid #555555; /* Subtle border for input fields */
+            border-right: none;
+            border-bottom: 2px solid #333333; /* Border on mobile */
         }
+    }
+</style>
 
-        /* Mobile-friendly adjustments */
-        @media (max-width: 768px) {
-            body {
-                font-size: 1.125rem; /* Larger font for smaller screens */
-            }
-
-            h2 {
-                font-size: 1.75rem; /* Adjust heading font size for mobile */
-            }
-
-            .objection-item {
-                font-size: 1.5rem; /* Larger text for mobile */
-            }
-
-            .main-container {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .left-panel,
-            .right-panel {
-                width: 100%;
-                border-right: none;
-                border-bottom: 2px solid #333333; /* Border on mobile */
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -120,18 +126,80 @@ So I wanted to make sure you had the chance to check it out before it’s gone. 
 
 It’ll just take about 5 minutes, and don’t worry—this won’t affect your credit score. ↓ (reassuring tone, steady pace)
 Mind if I ask you a few quick questions? ↑ (upbeat and inviting)
-... [remaining content]
+
+
+Verification Questions:
+Alright, let me just confirm some quick details: ↓
+
+Your name is spelled J-O-H-N S-M-I-T-H, right? ↓
+
+And your best number is (123) 456-7890? ↓
+
+What’s your best email address? ↓
+
+Can you confirm your full mailing address—street, city, state, and ZIP? ↓
+
+And what’s your monthly income after taxes? ↓
+
+
+
+Soft Credit Check Setup:
+Okay, last step before I transfer you to a loan specialist:
+We just need to run a soft credit check to confirm your eligibility. ↓
+This will not affect your credit score in any way. ↓ (pause briefly here)
+
+For that, I just need to confirm your date of birth, and the last four digits of your Social. ↓ (calm, non-pushy)
+
+
+If They Hesitate (Objection Handling):
+I totally get that. ↑ (empathetic, gentle)
+Just to reassure you—this is encrypted, not stored, and only used to confirm your identity. ↓
+In fact, it actually helps protect you, so nobody else can access this offer in your name. ↓
+
+And again, this soft check won’t touch your credit score. ↓ (reaffirm gently)
+
+Objection: “Where did you get my info?”
+That’s a great question. ↑
+You didn’t sign up directly—but your info came from a credit bureau’s pre-screen list. ↓
+We work with providers who use that list to offer lower-rate loan options to folks who may qualify. ↓
+
+It’s a secure, one-time use, and your data is never sold or reused. ↓
+
+
+IF APPROVED:
+Awesome—it looks like you meet the requirements! ↑
+I’m now going to connect you with a licensed loan specialist who’ll walk you through the best options. ↓ (smooth, enthusiastic)
+
+
+IF DECLINED:
+Thanks for your time, [Client Name]. ↓
+Right now, it looks like you don’t meet the minimum requirements—
+but you’re welcome to reapply in 60 to 90 days if anything changes. ↓ (kind, respectful tone)
+
+
+HANDOFF SECTION
+
+To Specialist:
+Hi [Specialist Name], I’ve got [Client Name] on the line. ↓
+File number is [Logixx File Number]. ↓
+They’ve been verified and meet all the minimum requirements.
+Can you walk them through the available loan options?
+
+To Client:
+[Client Name], thanks so much for holding. ↓
+I’ve got our loan specialist [Specialist Name] on the line now— 
+they’ll guide you through the rest. ↓
+Thanks again, and I hope you both have a great day! ↑
             </textarea>
         </div>
         <div class="right-panel">
             <h2>Objections and Rebuttals</h2>
             <input type="text" id="search" placeholder="Search Objection...">
             <ul id="objections" class="objections-list">
-                <li class="objection-item"><strong>1. "How did you get my information?"</strong><br>We work with secure, verified sources...</li>
-                <li class="objection-item"><strong>2. Hesitant to Provide SSN</strong><br>I completely understand. We only ask for your SSN...</li>
-                <li class="objection-item"><strong>3. "What company is this?"</strong><br>We’re the Loan Assistance Center...</li>
-                <li class="objection-item"><strong>4. "Don’t do a soft pull—I have bad credit."</strong><br>Totally get it...</li>
-                <!-- Add all your objections here -->
+                <li class="objection-item"><strong>1. "How did you get my information?"</strong><br>
+                We work with secure, verified sources to identify people who might benefit from our financial solutions. Our goal is <em>simple</em>: connect you with the right options without the hassle. We take privacy seriously, so your information is always protected.
+                <span class="intonation">(Pause briefly after 'simple' to let this sink in. Use a confident, reassuring tone. Rising intonation on 'simple' and falling intonation on 'protected'.)</span></li>
+                <!-- Add remaining objections here -->
             </ul>
         </div>
     </div>
