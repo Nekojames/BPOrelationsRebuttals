@@ -136,4 +136,17 @@ Mind if I ask you a few quick questions? ↑ (upbeat and inviting)
         </div>
     </div>
 
-    <script
+    <script>
+        document.getElementById("search").addEventListener("input", function (e) {
+            const query = e.target.value.toLowerCase();
+            const items = document.querySelectorAll(".objection-item");
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(query) ? "" : "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
