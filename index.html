@@ -12,8 +12,9 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
-        background-color: #121212; /* Dark background */
-        color: #E0E0E0; /* Light gray text for contrast */
+        background-color: #121212;
+        color: #E0E0E0;
+        font-size: 1rem; /* Base font size for better scalability */
     }
 
     .main-container {
@@ -31,18 +32,19 @@
     }
 
     .left-panel {
-        background-color: #1E1E1E; /* Darker gray background */
-        border-right: 2px solid #333; /* Subtle border */
+        background-color: #1E1E1E;
+        border-right: 2px solid #333;
     }
 
     .right-panel {
-        background-color: #1E1E1E; /* Darker gray background */
-        border-left: 2px solid #333; /* Subtle border */
+        background-color: #1E1E1E;
+        border-left: 2px solid #333;
     }
 
     h2 {
         text-align: center;
-        color: #FFFFFF; /* White text */
+        color: #FFFFFF;
+        font-size: 2rem; /* Larger font size for headings */
     }
 
     .objections-list {
@@ -53,32 +55,38 @@
 
     .objection-item {
         margin-bottom: 10px;
-        color: #E0E0E0; /* Light gray text for list items */
+        font-size: 1.25rem; /* Larger text for readability */
     }
 
-    input[type="text"] {
-        padding: 8px;
-        width: 100%;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-        background-color: #333; /* Dark input background */
-        color: #E0E0E0; /* Light text color */
-        border: 1px solid #555; /* Border to match theme */
-    }
-
-    textarea {
-        width: 100%;
-        height: 300px;
+    input[type="text"], textarea {
+        font-size: 1rem; /* Adjust font size in inputs and textareas */
         padding: 10px;
+        width: 100%;
         margin-bottom: 20px;
         box-sizing: border-box;
-        resize: vertical;
-        background-color: #333; /* Dark background */
-        color: #E0E0E0; /* Light text color */
-        border: 1px solid #555; /* Subtle border */
+        background-color: #333;
+        color: #E0E0E0;
+        border: 1px solid #555;
     }
 
+    /* Mobile adjustments */
     @media (max-width: 768px) {
+        body {
+            font-size: 1.25rem; /* Larger font size for small screens */
+        }
+
+        h2 {
+            font-size: 1.5rem; /* Adjust heading font size for mobile */
+        }
+
+        .objection-item {
+            font-size: 1.5rem; /* Increase font size for mobile for better readability */
+        }
+
+        input[type="text"], textarea {
+            font-size: 1.125rem; /* Increase input text size for mobile */
+        }
+
         .main-container {
             flex-direction: column;
             height: auto;
@@ -88,19 +96,20 @@
         .right-panel {
             width: 100%;
             border-right: none;
-            border-bottom: 2px solid #333; /* Darker border for mobile */
+            border-bottom: 2px solid #333;
         }
     }
 </style>
+
 
 </head>
 
 <body>
     <div class="main-container">
         <div class="left-panel">
-            <h2>Call Script</h2>
+            <h2>CNEKO'S CALL SCRIPT 🐈</h2>
             <textarea readonly>
-Neko's Awesome! COLD CALL SCRIPT – PERSONAL LOAN OFFER (With Intonation & Pacing)
+PERSONAL LOAN OFFER (With Intonation & Pacing)
 
 Agent:
 Hi, is this [Client Name]? ↑ (friendly, upward tone)
