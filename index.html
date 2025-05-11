@@ -293,17 +293,18 @@ Thanks again, and I hope you both have a great day! ↑
         </div>
     </div>
 
-    <script>
-        document.getElementById("search").addEventListener("input", function (e) {
-            const query = e.target.value.toLowerCase();
-            const items = document.querySelectorAll(".objection-item");
+   <script>
+    document.getElementById("search").addEventListener("input", function (e) {
+        const query = e.target.value.toLowerCase();
+        const items = document.querySelectorAll("#objections li");
 
-            items.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(query) ? "" : "none";
-            });
+        items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(query) ? "" : "none";
         });
-    </script>
+    });
+</script>
+
 </body>
 
 </html>
