@@ -387,15 +387,15 @@ I totally get where you're coming from, it's important to feel comfortable befor
         </div>
     </div>
    <script>
-      document.getElementById("search").addEventListener("input", function() {
-            let filter = this.value.toLowerCase();
-            let objections = document.querySelectorAll(".objection-item");
-            objections.forEach(function(objection) {
-                let text = objection.textContent || objection.innerText;
-                if (text.toLowerCase().indexOf(filter) > -1) {
-                    objection.style.display = "";
+        document.getElementById('search').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const objectionsList = document.querySelectorAll('#objections li');
+            objectionsList.forEach(function(item) {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block'; // Show the item
                 } else {
-                    objection.style.display = "none";
+                    item.style.display = 'none'; // Hide the item
                 }
             });
         });
