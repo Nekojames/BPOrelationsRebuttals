@@ -54,22 +54,25 @@
 
 /* Styling the form */
 .form-container {
-  background: #fff;
+  background: #000; /* Black background */
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   font-family: Arial, sans-serif;
+  color: #fff; /* White text */
 }
 
 .form-container h2 {
   margin-top: 0;
   text-align: center;
+  color: #fff;
 }
 
 .form-container label {
   display: block;
   margin: 12px 0 5px;
   font-weight: bold;
+  color: #fff; /* White text for labels */
 }
 
 .form-container input,
@@ -77,8 +80,10 @@
   width: 100%;
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #555; /* Dark border to match black theme */
   font-size: 14px;
+  background-color: #333; /* Dark background for inputs */
+  color: #fff; /* White text for inputs */
   box-sizing: border-box;
 }
 
@@ -125,7 +130,6 @@ button[type="reset"] {
 button:hover {
   opacity: 0.9;
 }
-
 
         .main-container {
             display: flex;
@@ -226,198 +230,50 @@ button:hover {
         <div class="left-panel">
             <h2>🐈NEKO'S CALL SCRIPT 🐈</h2>
             <textarea readonly>
-
-“Hey, this is James—I’m with Loan Assistance Center.
-How was your day? 
-
-
-This is regarding about personal loan offer
-you can use the loan for personal expenses consolidate or pay off high interest
-debts. Since this is a limited time offer I need to ask a few questions.
-
-"If cx hesitate" : 
-Have you already spoke to us about the personal loan offer?
-I'm not asking you to sign up for the loan just yet. I 
-want to ask details to make sure that you meet the minimum requirements to 
-take advantage of it.             
-                
-VERIFICATION 
-I want to check if we got your details correct.
-Name (spelling)
-Phone number 
-Email 
-Complete home address
-Estimated monthly income 
-
-Lastly, I will need to do a soft credit check before connecting you with a loan specialist. This will not affect your credit score in any way.
-For this, I'll just need to confirm your date of birth.
-Ok, and you're social.
-
-I'm submitting this to the underwriting department now, and it'll just take a few minutes to verify your status (Note: While waiting for the result, take the opportunity to build rapport with the lead. Engage in light conversation)
-Stalling questions : 
-How much do you owe with your other debts? 
-Out of curiosity, how much interest do they charge you with your current loans.
-What are your plans if you got approved?                
-
-STATUS DECLINED (Loan CR Agent): Unfortunately, you don't meet the minimum requirements right now, but you're welcome to apply with us again in 60/90 days.
-STATUS APPROVED (Loan CR Agent): It looks like you meet the minimum requirements, so we can proceed with transferring you to our specialist.
-
-HANDOFF
-Specialist: "Hi, this is Marc, agent ID 1234 with Lendvia, on a recorded line."
-CR Agent: "Hi, [Loan Specialist Name], I have [Client Name on the line with file number [Logixx file number. I've confirmed that [Client Name) meets all the minimum  requirements to proceed. Can you please go over the available loan options with them?”
-CR Agent: Hello (Customer)thank you for waiting. I have my loan specialist (Name) and he/she will help you further. Thank you for your time, you both have a GREAT day!
-
+“Hey, this is James—I’m with Loan Assistance Center...
             </textarea>
         </div>
         <div class="right-panel">
             <h2>Objections and Rebuttals</h2>
             <input type="text" id="search" placeholder="Search Objection..." style="width: 100%; padding: 10px;">
             <ul id="objections" class="objections-list">
-                <ol>
-    <li>How did you get my information?
-I understand your concern about how we obtained your information. As a licensed lender, we have authorized access to credit data through established and legal channels. This allows us to proactively identify individuals who may qualify for a personal loan and who could benefit from the financial services we offer. Rest assured, our processes are fully compliant with regulations to ensure privacy and transparency.</li>
-
-<li>Client hesitates to provide Social Security Number
-I completely understand your hesitation, and I truly respect your privacy concerns. Let me assure you that we employ cutting-edge encryption technology to protect your data, keeping it secure at all times. Your trust is something we deeply value and prioritize above all else. We would never compromise the integrity of our service or undermine the trust you place in us. Our sole goal is to help you achieve the best possible outcome, and the information we're requesting is simply to ensure that we can deliver the most tailored, beneficial solution for you. We’re here to support you, not complicate things. So, what's your social?</li>
-
-<li>What company is this?
-We are a Loan Assistance Center. We are committed to guiding you every step of the way, ensuring that you secure the best possible deal, tailored to your needs. Trust us to be your dedicated partner in navigating your financial future.</li>
-
-<li>NO NEED TO DO A SOFT CREDIT PULL I HAVE A BAD CREDIT SCORE!
-Thank you for sharing your concern. I completely understand how important your credit score is, and I want to reassure you that it doesn't have to be a barrier. In fact, even with a lower score, you could still qualify. We take a holistic approach to evaluating applicants, considering a range of factors beyond just your credit score. Our goal is to work with you, understand your unique situation, and find a solution that meets your needs. We’re here to help, and your current position is our priority. (GO BACK)</li>
-
-<li>IF WRONG INFO LIKE SSN:
-"Hi [Customer Name], it looks like the underwriting team is verifying some of your information to ensure everything is accurate. To proceed, we just need to confirm the correct details, including your Social Security Number. Could you please verify your SSN?</li>
-
-<li>I’m not interested / I'm not looking for a loan:
-What’s holding you back or making you not interested?
-I completely understand that this might not be what you're looking for right now. However, I just want to highlight that this loan could act as a safety net for any unexpected expenses. You’ll be glad to know that it doesn't require collateral and save you money at the same time. We’re not here to push you into the negative. We want to help you break free from any burdens, including financial challenges, and help you get back on track. We are here to support you every step of the way because we genuinely care about you! (GO BACK TO POI)</li>
-
-<li>OR
-I completely understand that (customer). However, it’s important to recognize that this loan could provide you with the financial freedom to handle life's uncertainties without the added pressure. It offers a way to address unexpected expenses, without risking any of your assets, and could help you save money in the process. We're not here to complicate things, but to offer a solution that could improve your financial stability. Sometimes, having this option available can make all the difference in how you manage future challenges. (Go back to POI)</li>
-
-<li>WHAT YOUR EXACT LOCATION?
-I understand your concern about the location, and I appreciate your need for clarity. We’re headquartered in Irvine, California, and our Personal Loan Intake Department partners with a network of over 25 reputable lenders across multiple states. While the exact location of the lender will be shared once we’ve verified your eligibility, this step ensures that we match you with the most suitable lender for your unique situation. Once your eligibility is confirmed, we’ll provide all the relevant details and ensure full transparency every step of the way(GO BACK TO QUALIFERS)</li>
-
-<li>No Time
-I know time is very important for you, I'll be quick about this so we can get you back to what you are doing as we respect your time. It is just that we don't want you to lose this opportunity since this is a limited offer.</li>
-
-<li>NO NEED TO DO A SOFT CREDIT PULL I HAVE A BAD CREDIT SCORE!
-I completely understand your concern about your credit score, and I want to assure you that it doesn’t have to hold you back. Even with a lower score, you could still qualify. We take a comprehensive, holistic approach to evaluating applicants, looking at a range of factors beyond just the credit score. Our focus is on understanding your unique situation and finding the best solution for you. We're here to work with you, and your current financial needs are our top priority. (GO BACK)</li>
-
-<li>ACCOUNT FROZEN Customer: "Why do I need to unlock my account for this soft credit pull?
-I completely understand your hesitation. The reason we need to unlock your account is to allow us to perform the soft credit pull, which is completely free and non-invasive. This is a standard procedure that helps us move forward smoothly with the process. You have two quick options to unlock your account:
-Call the Credit Bureau – While this option may take a few days to process, it’s a reliable way to unlock your account.
-Use the Website for Instant Access – The fastest way is to unlock it through the bureau’s website, which only takes a moment and gives you immediate access.
-If you’re not comfortable calling, the website option is quick and secure. It’s just a few minutes of your time, and then we can proceed without any delays. We're here to make the process as smooth as possible for you</li>
-
-<li>IF ASKING ABOUT WEBSITE, ADDRESS OR ANY INFO
-That’s a great question! I’d be happy to provide you with the details you’re looking for, including the website and any other specific information. To ensure you get the most accurate and secure details, may I have your email address? I’ll forward it to underwriting, and they will send you the credentials directly.
-I understand you're seeking precise information like the website or an exact address. That’s why I want to connect you with one of our expert loan specialists. They’re the best resource for answering your questions thoroughly and accurately, and I want to make sure you’re getting the most reliable info.
-Before I transfer you, could you kindly confirm your (current address, SSN, etc.) so we can ensure everything is in order?"</li>
-
-<li>Why don't you have my information?
-I completely understand your concern, (Customer), and I appreciate your patience. The reason we don’t have all of your details yet is because we pull from various sources, but we need to confirm everything directly with you to ensure it's accurate and up-to-date. This is a limited-time offer, and I don’t want you to miss out on the best possible terms. Once we’ve verified the information, we can move forward and present you with loan options that are tailored to your needs. Thanks for understanding – we’re here to make this process as smooth and beneficial as possible for you. (Smile and Go back)</li>
-
-<li>Rebuttal Script: Difference between our company and other lenders!
-That's a fantastic question, and I completely understand your need for clarity. Here’s how we stand out from other lenders:
-Lower Interest Rates: Our rates start at just 5.99%, which can save you significantly compared to many other options available in the market.
-Flexible Loan Options: We don’t just look at your credit score—we take a holistic approach to evaluate your financial situation, which means you have a better chance of approval.
-No Collateral Required: Unlike many lenders, we offer unsecured loans, so you won’t have to risk your assets or property.
-Fast and Efficient Process: We’ve streamlined everything to get you the funds you need quickly and with minimal hassle, making the experience as stress-free as possible.
-Top-Notch Security: We prioritize your privacy and use the latest encryption technology to ensure your personal and financial data remains safe.
-At [Your Company Name], our goal is to offer a better, more personalized experience that puts your needs first. We’re here to help you, not just to give you a loan, but to support your financial success.</li>
-
-<li>What's the good thing about SOFT CREDIT PULL vs. HARD CREDIT PULL
-The great thing about a soft credit pull is that it doesn’t affect your credit score at all. Unlike a hard pull, which can cause a temporary dip in your score and potentially impact future loan approvals, a soft pull is completely risk-free. It allows us to check your credit, review pre-approved offers, or perform a background check without any negative consequences. This means you can explore your options without worrying about damaging your credit. So, to proceed, could you please share your social security number? so whats your SOCIAL?</li>
-
-<li>Why do you need my email?
-I understand your concern, and I want to be transparent with you. We need your email to ensure that all critical documents, approvals, and updates are delivered to you securely and without delay. This is not just a formality—it’s a crucial step in our process to guarantee that you have everything you need, exactly when you need it, and that the information remains safe and accessible to you at all times!</li>
-
-<li>The customer wants to receive information via email first!
-We absolutely respect your preference to receive information via email first, and we're happy to accommodate that. However, to ensure we send you the most accurate and relevant details, we need to confirm a few essential pieces of information. This is a critical part of our process, allowing us to assess your eligibility and verify your identity.
-Once we confirm these details, you could be eligible for an approval amount of up to $100,000, depending on your qualifications. Please know that we’re here to make this process as easy and seamless as possible—our goal is to support you, not add any unnecessary steps. Your information will be handled with the highest level of security and confidentiality. Your email is?</li>
-
-<li>"NO RECORD FOUND,
-"Can you please confirm your full legal name as it appears on your card?" Please spell it out for me."
-Billing Address:
-"Can you confirm the utility/billing address associated with your account?"
-When you first applied for your SSN, which address were you living at?</li>
-
-<li>Customer doesn't have an EMAIL
-If you don't have an email, could you provide the email address of a family member or someone else we can use in the meantime to send you important documents?
-If there is no email address, please enter 'noemail@email.com' in the required field to proceed.</li>
-
-<li>Customer doesn’t want to be connected to LS:
-I totally get where you're coming from, it's important to feel comfortable before making any decision. But here's the good news: there's zero pressure. Talking to our loan advisor is completely free, comes with no commitment, and you can walk away at any time. But I’ll be honest—most people don’t, because once they see how much they can save or how simple the process really is, they realize it’s actually a great opportunity. So let me go ahead and connect you very quick, hold on!</li>
-
-</ol>
-
+                <li>How did you get my information?...</li>
+                <!-- Add more objections here -->
             </ul>
         </div>
     </div>
+    <button id="toggleBtn">Toggle Form</button>
 
-<!-- Toggle Button -->
-<button id="toggleBtn">📝 Form</button>
+    <!-- Hidden form widget -->
+    <div class="form-widget">
+        <div class="form-container">
+            <h2>Form Title</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
 
-<!-- Widget Form -->
-<div class="form-widget" id="formWidget">
-  <form class="form-container" id="issueForm">
-    <h2>Submit Issue</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
 
-    <label for="crmId">CRM ID:</label>
-    <input type="text" id="crmId" name="crmId">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
 
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="tel" id="phoneNumber" name="phoneNumber">
-
-    <label for="issue">Issue:</label>
-    <textarea id="issue" name="issue"></textarea>
-
-    <div class="button-group">
-      <button type="submit">Submit</button>
-      <button type="button" class="copy-btn" onclick="copyForm()">Copy</button>
-      <button type="reset">Reset</button>
+                <div class="button-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
     </div>
-  </form>
-</div>
 
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const formWidget = document.querySelector('.form-widget');
 
-   <script>
-    document.getElementById("search").addEventListener("input", function (e) {
-        const query = e.target.value.toLowerCase();
-        const items = document.querySelectorAll("#objections li");
-
-        items.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            item.style.display = text.includes(query) ? "" : "none";
+        toggleBtn.addEventListener('click', () => {
+            formWidget.classList.toggle('open');
         });
-    });
-
- <script>
-  // Toggle form visibility
-  const toggleBtn = document.getElementById('toggleBtn');
-  const formWidget = document.getElementById('formWidget');
-
-  toggleBtn.addEventListener('click', () => {
-    formWidget.classList.toggle('open');
-  });
-
-  // Copy form info to clipboard
-  function copyForm() {
-    const crmId = document.getElementById("crmId").value;
-    const phone = document.getElementById("phoneNumber").value;
-    const issue = document.getElementById("issue").value;
-    const text = `CRM ID: ${crmId}\nPhone Number: ${phone}\nIssue: ${issue}`;
-
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Copied to clipboard!");
-    });
-  }
-</script>
-
-</script>
-
+    </script>
 </body>
 
 </html>
