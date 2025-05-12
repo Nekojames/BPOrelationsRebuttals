@@ -391,16 +391,18 @@ I totally get where you're coming from, it's important to feel comfortable befor
 
         
    <script>
-    document.getElementById("search").addEventListener("input", function (e) {
-        const query = e.target.value.toLowerCase();
-        const items = document.querySelectorAll("#objections li");
-
-        items.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            item.style.display = text.includes(query) ? "" : "none";
+      document.getElementById("search").addEventListener("input", function() {
+            let filter = this.value.toLowerCase();
+            let objections = document.querySelectorAll(".objection-item");
+            objections.forEach(function(objection) {
+                let text = objection.textContent || objection.innerText;
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    objection.style.display = "";
+                } else {
+                    objection.style.display = "none";
+                }
+            });
         });
-    });
-
         const toggleBtn = document.getElementById('toggleBtn');
         const formWidget = document.querySelector('.form-widget');
         const copyBtn = document.getElementById('copyBtn');
