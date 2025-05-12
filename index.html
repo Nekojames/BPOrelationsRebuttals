@@ -6,223 +6,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Intake Call Script</title>
     <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Black background */
+        color: #FFFFFF; /* White text */
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Toggle Button */
+    #toggleBtn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1001;
+        padding: 12px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hidden form widget */
+    .form-widget {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 1000;
+        max-width: 400px;
+        width: 100%;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        pointer-events: none;
+    }
+
+    /* When visible */
+    .form-widget.open {
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Styling the form */
+    .form-container {
+        background: #000; /* Black background */
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        font-family: Arial, sans-serif;
+        color: #fff; /* White text */
+    }
+
+    .form-container h2 {
+        margin-top: 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    .form-container label {
+        display: block;
+        margin: 12px 0 5px;
+        font-weight: bold;
+        color: #fff; /* White text for labels */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #555; /* Dark border to match black theme */
+        font-size: 14px;
+        background-color: #333; /* Dark background for inputs */
+        color: #fff; /* White text for inputs */
+        box-sizing: border-box;
+    }
+
+    .form-container textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .button-group button {
+        flex: 1;
+        margin-right: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .button-group button:last-child {
+        margin-right: 0;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .copy-btn {
+        background-color: #28a745;
+        color: white;
+    }
+
+    button[type="reset"] {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    /* Main layout styles */
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .left-panel {
+        background-color: #121212;
+        border-right: 2px solid #333;
+    }
+
+    .right-panel {
+        background-color: #121212;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .objections-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .objection-item {
+        margin-bottom: 15px;
+        font-size: 1.25rem;
+        color: #E0E0E0;
+    }
+
+    textarea {
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+        height: 90%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        background-color: #333333;
+        color: #FFFFFF;
+        border: 1px solid #555555;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        resize: both;
+    }
+
+    /* Mobile-friendly adjustments */
+    @media (max-width: 768px) {
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            background-color: #000000; /* Black background */
-            color: #FFFFFF; /* White text */
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.125rem;
         }
 
-        /* Toggle Button */
-        #toggleBtn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1001;
-            padding: 12px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        h2 {
+            font-size: 1.75rem;
         }
 
-        /* Hidden form widget */
-        .form-widget {
-            position: fixed;
-            bottom: 80px;
-            right: 30px;
-            z-index: 1000;
-            max-width: 400px;
-            width: 100%;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-in-out;
-            pointer-events: none;
-        }
-
-        /* When visible */
-        .form-widget.open {
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-
-        /* Styling the form */
-        .form-container {
-            background: #000; /* Black background */
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            font-family: Arial, sans-serif;
-            color: #fff; /* White text */
-        }
-
-        .form-container h2 {
-            margin-top: 0;
-            text-align: center;
-            color: #fff;
-        }
-
-        .form-container label {
-            display: block;
-            margin: 12px 0 5px;
-            font-weight: bold;
-            color: #fff; /* White text for labels */
-        }
-
-        .form-container input,
-        .form-container textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #555; /* Dark border to match black theme */
-            font-size: 14px;
-            background-color: #333; /* Dark background for inputs */
-            color: #fff; /* White text for inputs */
-            box-sizing: border-box;
-        }
-
-        .form-container textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .button-group button {
-            flex: 1;
-            margin-right: 10px;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .button-group button:last-child {
-            margin-right: 0;
-        }
-
-        button[type="submit"] {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .copy-btn {
-            background-color: #28a745;
-            color: white;
-        }
-
-        button[type="reset"] {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        button:hover {
-            opacity: 0.9;
+        .objection-item {
+            font-size: 1.5rem;
         }
 
         .main-container {
-            display: flex;
-            flex-direction: row;
-            height: 100vh;
-            flex-wrap: wrap;
+            flex-direction: column;
+            height: auto;
         }
 
         .left-panel,
         .right-panel {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            box-sizing: border-box;
-        }
-
-        .left-panel {
-            background-color: #121212;
-            border-right: 2px solid #333;
-        }
-
-        .right-panel {
-            background-color: #121212;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #FFFFFF;
-            margin: 0;
-            padding: 20px 0;
-        }
-
-        .objections-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .objection-item {
-            margin-bottom: 15px;
-            font-size: 1.25rem;
-            color: #E0E0E0;
+            width: 100%;
+            border-right: none;
+            border-bottom: 2px solid #333333;
         }
 
         textarea {
-            font-size: 1rem;
-            padding: 10px;
+            height: 50vh;
+        }
+
+        .form-widget {
+            bottom: 120px; /* Adjusted for better visibility on mobile */
+        }
+
+        /* Make form widget width 100% on mobile */
+        .form-widget.open {
+            max-width: 100%;
             width: 100%;
-            height: 90%;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            background-color: #333333;
-            color: #FFFFFF;
-            border: 1px solid #555555;
-            overflow-y: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            resize: both;
         }
+    }
+</style>
 
-        /* Mobile-friendly adjustments */
-        @media (max-width: 768px) {
-            body {
-                font-size: 1.125rem;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-            }
-
-            .objection-item {
-                font-size: 1.5rem;
-            }
-
-            .main-container {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .left-panel,
-            .right-panel {
-                width: 100%;
-                border-right: none;
-                border-bottom: 2px solid #333333;
-            }
-
-            textarea {
-                height: 50vh;
-            }
-        }
-    </style>
 </head>
 
 <body>
