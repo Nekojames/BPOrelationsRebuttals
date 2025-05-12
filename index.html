@@ -13,123 +13,124 @@
             margin: 0;
             padding: 0;
             background-color: #000000; /* Black background */
-            color: #FFFFFF; /* White text for high contrast */
-            font-size: 1rem; /* Base font size for readability */
-            line-height: 1.6; /* Improved line spacing for readability */
+            color: #FFFFFF; /* White text */
+            font-size: 1rem;
+            line-height: 1.6;
         }
+
         /* Toggle Button */
-#toggleBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1001;
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+        #toggleBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-/* Hidden form widget */
-.form-widget {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
-  z-index: 1000;
-  max-width: 400px;
-  width: 100%;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-  pointer-events: none;
-}
+        /* Hidden form widget */
+        .form-widget {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            z-index: 1000;
+            max-width: 400px;
+            width: 100%;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            pointer-events: none;
+        }
 
-/* When visible */
-.form-widget.open {
-  transform: translateY(0);
-  pointer-events: auto;
-}
+        /* When visible */
+        .form-widget.open {
+            transform: translateY(0);
+            pointer-events: auto;
+        }
 
-/* Styling the form */
-.form-container {
-  background: #000; /* Black background */
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  font-family: Arial, sans-serif;
-  color: #fff; /* White text */
-}
+        /* Styling the form */
+        .form-container {
+            background: #000; /* Black background */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            font-family: Arial, sans-serif;
+            color: #fff; /* White text */
+        }
 
-.form-container h2 {
-  margin-top: 0;
-  text-align: center;
-  color: #fff;
-}
+        .form-container h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #fff;
+        }
 
-.form-container label {
-  display: block;
-  margin: 12px 0 5px;
-  font-weight: bold;
-  color: #fff; /* White text for labels */
-}
+        .form-container label {
+            display: block;
+            margin: 12px 0 5px;
+            font-weight: bold;
+            color: #fff; /* White text for labels */
+        }
 
-.form-container input,
-.form-container textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #555; /* Dark border to match black theme */
-  font-size: 14px;
-  background-color: #333; /* Dark background for inputs */
-  color: #fff; /* White text for inputs */
-  box-sizing: border-box;
-}
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #555; /* Dark border to match black theme */
+            font-size: 14px;
+            background-color: #333; /* Dark background for inputs */
+            color: #fff; /* White text for inputs */
+            box-sizing: border-box;
+        }
 
-.form-container textarea {
-  resize: vertical;
-  min-height: 80px;
-}
+        .form-container textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
 
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
 
-.button-group button {
-  flex: 1;
-  margin-right: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
+        .button-group button {
+            flex: 1;
+            margin-right: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-.button-group button:last-child {
-  margin-right: 0;
-}
+        .button-group button:last-child {
+            margin-right: 0;
+        }
 
-button[type="submit"] {
-  background-color: #007bff;
-  color: white;
-}
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
 
-.copy-btn {
-  background-color: #28a745;
-  color: white;
-}
+        .copy-btn {
+            background-color: #28a745;
+            color: white;
+        }
 
-button[type="reset"] {
-  background-color: #dc3545;
-  color: white;
-}
+        button[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
 
-button:hover {
-  opacity: 0.9;
-}
+        button:hover {
+            opacity: 0.9;
+        }
 
         .main-container {
             display: flex;
@@ -147,18 +148,18 @@ button:hover {
         }
 
         .left-panel {
-            background-color: #121212; /* Darker gray background for left panel */
-            border-right: 2px solid #333; /* Subtle border between panels */
+            background-color: #121212;
+            border-right: 2px solid #333;
         }
 
         .right-panel {
-            background-color: #121212; /* Darker gray background for right panel */
+            background-color: #121212;
         }
 
         h2 {
             text-align: center;
-            font-size: 2rem; /* Larger heading for better visibility */
-            color: #FFFFFF; /* White color for headings */
+            font-size: 2rem;
+            color: #FFFFFF;
             margin: 0;
             padding: 20px 0;
         }
@@ -171,38 +172,38 @@ button:hover {
 
         .objection-item {
             margin-bottom: 15px;
-            font-size: 1.25rem; /* Slightly larger font for easy reading */
-            color: #E0E0E0; /* Lighter gray text for item descriptions */
+            font-size: 1.25rem;
+            color: #E0E0E0;
         }
 
         textarea {
-            font-size: 1rem; /* Text size for textarea */
+            font-size: 1rem;
             padding: 10px;
             width: 100%;
             height: 90%;
             margin-bottom: 20px;
             box-sizing: border-box;
-            background-color: #333333; /* Dark background for textarea */
-            color: #FFFFFF; /* White text for textarea */
-            border: 1px solid #555555; /* Subtle border for textarea */
+            background-color: #333333;
+            color: #FFFFFF;
+            border: 1px solid #555555;
             overflow-y: auto;
-            white-space: pre-wrap; /* Preserve formatting and line breaks */
-            word-wrap: break-word; /* Break words if necessary */
-            resize: both; /* Make the textarea resizable both vertically and horizontally */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            resize: both;
         }
 
         /* Mobile-friendly adjustments */
         @media (max-width: 768px) {
             body {
-                font-size: 1.125rem; /* Larger font for smaller screens */
+                font-size: 1.125rem;
             }
 
             h2 {
-                font-size: 1.75rem; /* Adjust heading font size for mobile */
+                font-size: 1.75rem;
             }
 
             .objection-item {
-                font-size: 1.5rem; /* Larger text for mobile */
+                font-size: 1.5rem;
             }
 
             .main-container {
@@ -214,12 +215,11 @@ button:hover {
             .right-panel {
                 width: 100%;
                 border-right: none;
-                border-bottom: 2px solid #333333; /* Border on mobile */
+                border-bottom: 2px solid #333333;
             }
 
-            /* Adjust textarea height on mobile for better visibility */
             textarea {
-                height: 50vh; /* Set height to 50% of the viewport on mobile */
+                height: 50vh;
             }
         }
     </style>
@@ -242,25 +242,26 @@ button:hover {
             </ul>
         </div>
     </div>
+
     <button id="toggleBtn">Toggle Form</button>
 
     <!-- Hidden form widget -->
     <div class="form-widget">
         <div class="form-container">
-            <h2>Form Title</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
+            <h2>Loan Intake Form</h2>
+            <form id="loanForm">
+                <label for="crm">CRM</label>
+                <input type="text" id="crm" name="crm">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone">
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
+                <label for="issue">Issue</label>
+                <textarea id="issue" name="issue"></textarea>
 
                 <div class="button-group">
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
+                    <button type="button" id="copyBtn" class="copy-btn">Copy</button>
+                    <button type="reset" id="clearBtn">Clear</button>
                 </div>
             </form>
         </div>
@@ -269,9 +270,34 @@ button:hover {
     <script>
         const toggleBtn = document.getElementById('toggleBtn');
         const formWidget = document.querySelector('.form-widget');
+        const copyBtn = document.getElementById('copyBtn');
+        const crmInput = document.getElementById('crm');
+        const phoneInput = document.getElementById('phone');
+        const issueInput = document.getElementById('issue');
 
         toggleBtn.addEventListener('click', () => {
             formWidget.classList.toggle('open');
+        });
+
+        // Copy the form data to the clipboard
+        copyBtn.addEventListener('click', () => {
+            const crm = crmInput.value;
+            const phone = phoneInput.value;
+            const issue = issueInput.value;
+            const formData = `CRM: ${crm}\nPhone: ${phone}\nIssue: ${issue}`;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(formData).then(() => {
+                alert('Form data copied to clipboard!');
+            });
+        });
+
+        // Clear the form fields
+        const clearBtn = document.getElementById('clearBtn');
+        clearBtn.addEventListener('click', () => {
+            crmInput.value = '';
+            phoneInput.value = '';
+            issueInput.value = '';
         });
     </script>
 </body>
