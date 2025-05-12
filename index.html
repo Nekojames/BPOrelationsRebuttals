@@ -248,6 +248,21 @@ I totally get where you're coming from, it's important to feel comfortable befor
         </div>
     </div>
 
+<form id="supportForm" style="margin-top: 20px;">
+  <label for="crmId">CRM ID:</label><br>
+  <input type="text" id="crmId" name="crmId" required><br><br>
+
+  <label for="phoneNumber">Phone Number:</label><br>
+  <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+  <label for="issue">Issue:</label><br>
+  <textarea id="issue" name="issue" rows="4" cols="50" required></textarea><br><br>
+
+  <button type="submit">Submit</button>
+  <button type="button" onclick="copyForm()">Copy</button>
+  <button type="reset">Reset</button>
+</form>
+
    <script>
     document.getElementById("search").addEventListener("input", function (e) {
         const query = e.target.value.toLowerCase();
@@ -258,6 +273,20 @@ I totally get where you're coming from, it's important to feel comfortable befor
             item.style.display = text.includes(query) ? "" : "none";
         });
     });
+
+  function copyForm() {
+  const crmId = document.getElementById("crmId").value;
+  const phone = document.getElementById("phoneNumber").value;
+  const issue = document.getElementById("issue").value;
+
+  const textToCopy = `CRM ID: ${crmId}\nPhone Number: ${phone}\nIssue: ${issue}`;
+
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert("Form info copied to clipboard!");
+  }).catch(err => {
+    alert("Failed to copy: " + err);
+  });
+}
 </script>
 
 </body>
