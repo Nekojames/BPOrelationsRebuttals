@@ -414,6 +414,23 @@ I totally get where you're coming from, it's important to feel comfortable befor
             phoneInput.value = '';
             issueInput.value = '';
         });
+
+  const searchInput = document.getElementById('search');
+    const objectionsList = document.getElementById('objections');
+    const objectionItems = document.querySelectorAll('.objection-item');
+
+    searchInput.addEventListener('input', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        objectionItems.forEach(function (item) {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
     </script>
 </body>
 
