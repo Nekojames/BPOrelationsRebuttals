@@ -223,16 +223,6 @@
         textarea {
             height: 50vh;
         }
-
-        .form-widget {
-            bottom: 120px; /* Adjusted for better visibility on mobile */
-        }
-
-        /* Make form widget width 100% on mobile */
-        .form-widget.open {
-            max-width: 100%;
-            width: 100%;
-        }
     }
 </style>
 
@@ -381,32 +371,7 @@ CR Agent: Hello (Customer)thank you for waiting. I have my loan specialist (Name
     <p>Rebuttal: "I completely understand. It may seem like an extra step, but it’s a quick process. The credit bureaus, like Experian, Equifax, and TransUnion, have dedicated support teams to help with unlocking your account. You can either call them or go to their website to do this securely. Once it’s unlocked, we can proceed without any delays. It's really just a few minutes, and after that, we’re good to go."</p>
   </li>
 </ol>
-
             </ul>
-        </div>
-    </div>
-
-    <button id="toggleBtn">Toggle Form</button>
-
-    <!-- Hidden form widget -->
-    <div class="form-widget">
-        <div class="form-container">
-            <h2>Loan Intake Form</h2>
-            <form id="loanForm">
-                <label for="crm">CRM</label>
-                <input type="text" id="crm" name="crm">
-
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone">
-
-                <label for="issue">Issue</label>
-                <textarea id="issue" name="issue"></textarea>
-
-                <div class="button-group">
-                    <button type="button" id="copyBtn" class="copy-btn">Copy</button>
-                    <button type="reset" id="clearBtn">Clear</button>
-                </div>
-            </form>
         </div>
     </div>
    <script>
@@ -422,39 +387,6 @@ CR Agent: Hello (Customer)thank you for waiting. I have my loan specialist (Name
                 }
             });
         });
-        const toggleBtn = document.getElementById('toggleBtn');
-        const formWidget = document.querySelector('.form-widget');
-        const copyBtn = document.getElementById('copyBtn');
-        const crmInput = document.getElementById('crm');
-        const phoneInput = document.getElementById('phone');
-        const issueInput = document.getElementById('issue');
-
-        toggleBtn.addEventListener('click', () => {
-            formWidget.classList.toggle('open');
-        });
-
-        // Copy the form data to the clipboard
-        copyBtn.addEventListener('click', () => {
-            const crm = crmInput.value;
-            const phone = phoneInput.value;
-            const issue = issueInput.value;
-            const formData = `CRM: ${crm}\nPhone: ${phone}\nIssue: ${issue}`;
-
-            // Copy to clipboard
-            navigator.clipboard.writeText(formData).then(() => {
-                alert('Form data copied to clipboard!');
-            });
-        });
-
-        // Clear the form fields
-        const clearBtn = document.getElementById('clearBtn');
-        clearBtn.addEventListener('click', () => {
-            crmInput.value = '';
-            phoneInput.value = '';
-            issueInput.value = '';
-        });
-
-
     </script>
 </body>
 
