@@ -194,6 +194,35 @@
         resize: both;
     }
 
+    /* 2-Page Layout for Objections and Script */
+    .objections-container, .script-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .objections-container {
+        max-height: 50vh; /* Set maximum height for objections to fit on one page */
+        overflow-y: auto;
+    }
+
+    .script-container {
+        max-height: 50vh; /* Set maximum height for script to fit on second page */
+        overflow-y: auto;
+    }
+
+    .objections-container h3, .script-container h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .objection-item, .script-item {
+        font-size: 1.25rem;
+        color: #E0E0E0;
+        margin-bottom: 10px;
+    }
+
     /* Mobile-friendly adjustments */
     @media (max-width: 768px) {
         body {
@@ -223,8 +252,19 @@
         textarea {
             height: 50vh;
         }
+
+        .form-widget {
+            bottom: 120px; /* Adjusted for better visibility on mobile */
+        }
+
+        /* Make form widget width 100% on mobile */
+        .form-widget.open {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 </style>
+
 
 </head>
 
