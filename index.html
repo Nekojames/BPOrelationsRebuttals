@@ -262,6 +262,9 @@
             max-width: 100%;
             width: 100%;
         }
+.hidden {
+  display: none;
+}
     }
 </style>
 
@@ -275,21 +278,17 @@
             <textarea readonly>
 
  Personal Loan Offer Call Script – High-Conversion Version
-
 Agent:
- Hello, [Customer’s Name]! It’s a pleasure speaking with you today—how are you doing?
+Hello, [Customer’s Name]! It’s a pleasure speaking with you today—how are you doing?
 Customer Response
 Agent:
- That’s great to hear! I’m [Your Name], and the reason for my call is to quickly follow up on a loan offer we recently sent you in the mail. You've been personally selected for an Amazing ,
-                limited-time, 
-                no-collateral loan offer—and you may qualify for up to $100,000. 
+That’s great to hear! I’m [Your Name], and the reason for my call is to quickly follow up on a loan offer we recently sent you in the mail. 
+You've been personally selected for an Amazing ,limited-time, no-collateral loan offer—and you may qualify for up to $100,000. 
 You will be happy to know that  It’s a fast and flexible financial solution to help you take control—whether you're consolidating debt, covering major expenses,
-                or just ready to move forward financially. Best of all, it’s a risk-free opportunity with no obligation to accept.
-Verification Section
+or just ready to move forward financially. Best of all, it’s a risk-free opportunity with no obligation to accept.
+VERIFICATION
 Let’s confirm a few quick details to double check your eligibility for the loan, I have here:
 Your full name is ______, correct?
-
-
 And your best contact number is still (123) 456-7890, right?
 Great—what’s your active email address so we can send your approval summary?
 And your current home address?
@@ -303,8 +302,7 @@ Now, the next step is just a quick soft credit check—this will definitely won�
 What’s your date of birth?
 And your Social?
 Perfect—thank you.
-
-Powerful Closing Transition
+CLOSING TRANSITION
 Great news—your profile has just been submitted to our underwriting team, and based on what I’m seeing here, you’re in a very strong position to qualify.
 Here’s the thing—these offers are time-sensitive, and underwriting can only approve a limited number each day. Since we’re doing this now, 
 you’re first in line and don’t risk getting pushed to a future cycle. (waiting for the result: APPROVED/DECLINED spiel)
@@ -359,19 +357,20 @@ CR Agent: Hello (Customer)thank you for waiting. I have my loan specialist (Name
         </div>
     </div>
    <script>
-        document.getElementById('search').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const objectionsList = document.querySelectorAll('#objections li');
-            objectionsList.forEach(function(item) {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    item.style.display = 'block'; // Show the item
-                } else {
-                    item.style.display = 'none'; // Hide the item
-                }
-            });
-        });
-    </script>
+  document.getElementById('search').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const objectionsList = document.querySelectorAll('#objections li');
+
+    objectionsList.forEach(function(item) {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(query)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
